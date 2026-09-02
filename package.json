@@ -1,0 +1,27 @@
+{
+  "name": "matchmates-root",
+  "version": "1.0.0",
+  "description": "MatchMates - Fast & Social Casual Multiplayer Fruit Matching Game",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\" --names \"SERVER,CLIENT\" --prefix-colors \"yellow,cyan\"",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm run dev",
+    "start": "node server/index.js",
+    "build": "cd client && npm run build",
+    "install:all": "npm install && cd server && npm install && cd ../client && npm install",
+    "test:server": "cd server && npm test"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "keywords": [
+    "multiplayer",
+    "game",
+    "casual-game",
+    "socket.io",
+    "react",
+    "matchmates"
+  ],
+  "author": "Antigravity",
+  "license": "MIT"
+}
